@@ -9,15 +9,19 @@ function App() {
   // let counter = 15;
 
   const addValue=()=>{
+    if(counter != 20){
     counter = counter + 1;
     console.log("value added", counter);
     setCounter(counter);
+    }
   }
 
   const removeValue=()=>{
+    if(counter != 0){
     counter = counter - 1;
     console.log("value removed", counter);
     setCounter(counter);
+    }
   }
 
   return (
