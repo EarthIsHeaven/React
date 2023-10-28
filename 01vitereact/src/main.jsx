@@ -15,15 +15,18 @@ const anotherElement = (
   </a>
 )
 
+const anotherUser = "chai aur react"
+
 const reactElement = React.createElement(
   'a',
   {href: 'https://google.com', target: '_blank'},
-  'click me to visit google'
+  'click me to visit google',
+  anotherUser
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  //   <MyApp />
-  // </React.StrictMode>,
-  reactElement
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  // reactElement
 )
