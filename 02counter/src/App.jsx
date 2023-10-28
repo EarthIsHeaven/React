@@ -14,6 +14,12 @@ function App() {
     setCounter(counter);
   }
 
+  const removeValue=()=>{
+    counter = counter - 1;
+    console.log("value removed", counter);
+    setCounter(counter);
+  }
+
   return (
     <>
       <h1>Chai aur react</h1>
@@ -25,7 +31,10 @@ function App() {
       </button>
       <br />
       
-      <button>remove value {counter}</button>
+      <button 
+      onClick={removeValue}
+      >remove value {counter}
+        </button>
     </>
   )
 }
