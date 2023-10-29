@@ -12,7 +12,10 @@ function App() {
     if(counter != 20){
     counter = counter + 1;
     console.log("value added", counter);
+
     setCounter(counter);
+    // setCounter(prevCounter => prevCounter + 1);
+    // setCounter(prevCounter => prevCounter + 1);
     }
   }
 
