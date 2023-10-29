@@ -13,9 +13,9 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-green-500 p-4 rounded-xl'>Tailwind</h1>
-      <Card channel="Thinley" someObj={myObj}/>
-      <Card />
+      <h1 className='bg-green-500 p-4 rounded-xl mb-4'>Tailwind</h1>
+      <Card username="Thinley" job="Engineer" location="California" someObj={myObj}/>
+      <Card username="Don" job="Doctor" location="Kathmandu"/>
     </>
   )
 }
