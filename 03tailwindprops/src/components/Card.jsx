@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Card(props){
-  console.log(props.username);
+function Card({username="None", job = "None", location = "None"}){
+  console.log(username);
     return (
 
         <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
@@ -16,10 +16,10 @@ function Card(props){
     </blockquote>
     <figcaption className="font-medium">
       <div className="text-sky-500 dark:text-sky-400">
-        {props.username}
+        {username}
       </div>
       <div className="text-slate-700 dark:text-slate-500">
-        {props.job}, {props.location}
+        {job}, {location}
       </div>
     </figcaption>
   </div>

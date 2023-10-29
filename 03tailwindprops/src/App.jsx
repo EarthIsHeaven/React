@@ -15,7 +15,7 @@ function App() {
     <>
       <h1 className='bg-green-500 p-4 rounded-xl mb-4'>Tailwind</h1>
       <Card username="Thinley" job="Engineer" location="California" someObj={myObj}/>
-      <Card username="Don" job="Doctor" location="Kathmandu"/>
+      <Card username="Don" job="Doctor" />
     </>
   )
 }
