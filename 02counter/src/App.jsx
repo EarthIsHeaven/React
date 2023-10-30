@@ -15,7 +15,7 @@ function App() {
 
     setCounter(counter);
     // setCounter(prevCounter => prevCounter + 1);
-    // setCounter(prevCounter => prevCounter + 1);
+    // setCounter(prevCounter => prevCounter + 1);    
     }
   }
 
