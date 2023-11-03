@@ -70,7 +70,11 @@ function App() {
                     <div className="w-full mt-1 mb-4">
                         <InputBox
                             label="To"
-                            amount={convertedAmount}
+                            amount={
+                                Number.isInteger(convertedAmount) // Check if it's an integer
+                                  ? convertedAmount.toFixed(0)    // Display as an integer
+                                  : convertedAmount.toFixed(5) // Display as a decimal with 5 decimal places
+                              }
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
                             selectCurrency={to}
