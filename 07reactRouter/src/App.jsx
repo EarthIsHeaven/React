@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-      <h1 className="bg-red-500 text-3xl p-5 rounded-md">Testing tailwind.</h1>
     </>
   )
 }
