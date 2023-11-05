@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-
-import { Link } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 
 function Github(){
-    const [data, setData] = useState([])
-    useEffect(()=> {
-        fetch('https://api.github.com/users/EarthisHeaven')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            setData(data)
-        })
-    }, [])
+    const data = useLoaderData();
+    // const [data, setData] = useState([])
+    // useEffect(()=> {
+    //     fetch('https://api.github.com/users/EarthisHeaven')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         setData(data)
+    //     })
+    // }, [])
 
     return (
         <div className='bg-orange-300 text-black text-3xl p-5 m-5'>
@@ -29,3 +29,8 @@ function Github(){
 }
 
 export default Github
+
+export const githubInfoLoader = async () =>{
+    const response = await fetch('https://api.github.com/users/EarthisHeaven')
+    return response.json()
+}
