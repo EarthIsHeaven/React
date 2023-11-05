@@ -7,6 +7,7 @@ import Layout from './Layout.jsx'
 import {Home} from './components'
 import {About} from './components'
 import {Contact} from './components'
+import {User} from './components'
 import { Route } from 'react-router-dom'
 
 // const router = createBrowserRouter([
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='user/:id' element={<User />} />
     </Route>
   )
 )
