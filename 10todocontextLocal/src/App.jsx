@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TodoProvider } from './contexts'
 import './App.css'
 
@@ -22,6 +22,14 @@ function App() {
     id ? {... prevTodo, completed: !prevTodo.completed} :
     prevTodo))
   }
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"))
+
+    if(todos && todos.length > 0) {
+
+    }
+  }, [])
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
