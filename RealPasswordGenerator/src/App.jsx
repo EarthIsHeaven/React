@@ -13,7 +13,18 @@ function App() {
     let words = ["Homee", "Argue", "Beach", "Above", "Alike", "Arise", "Begin", "clean", "Dealt", "Guide", "Human", "Movie", "Tired", "Legal", "Round", "Shall", "Usage", "Woman", "Vital", "Sorry", "Upset", "Faith"];
     let randomIndex = Math.floor(Math.random() * words.length);
     let randomWord = words[randomIndex];
-    let remain = length-5;
+
+    //Symbol
+    let randomSymbol = "";
+    let Symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "<", ","];
+    for(let i=1;i<=2;i++){
+      let randomSymbolIndex = Math.floor(Math.random() * Symbols.length);
+      randomSymbol = Symbols[randomSymbolIndex];
+      randomWord+=randomSymbol;
+    }
+
+    //Number
+    let remain = length-7;
     for(let i=1;i<=remain;i++){
       let randomNum = Math.floor(Math.random() * 10);
       randomWord+=randomNum;
@@ -59,7 +70,7 @@ function App() {
           <div className="flex items-center gap-x-1">
             <input 
             type="range" 
-            min={6}
+            min={8}
             max={100}
             value={length}
             className="cursor-pointer"
