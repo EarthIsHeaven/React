@@ -12,7 +12,7 @@ function App() {
   //useRef hook
   const passwordRef = useRef(null)
 
-  const passwordGenerator = useCallback(()=> {
+  const passwordGenerator = useCallback(()=> {  //The useCallback Hook only runs when one of its dependencies update.
     let pass = ""
     let str =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
