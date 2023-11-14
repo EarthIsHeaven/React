@@ -9,8 +9,8 @@ function App() {
   const passwordRef = useRef(null)
 
   const passwordGenerator = useCallback(()=> {  //The useCallback Hook only runs when one of its dependencies update.
-
-    let words = ["Homee", "Argue", "Beach", "Above", "Alike", "Arise", "Begin", "clean", "Dealt", "Guide", "Human", "Movie", "Tired", "Legal", "Round", "Shall", "Usage", "Woman", "Vital", "Sorry", "Upset", "Faith"];
+    
+    let words = ["Civil","Worse","Video","Young","Which","Delay","Group","Forth","Entry","Carry","Brain", "Crash","Homee", "Argue", "Beach", "Above", "Bases","Alike", "Arise", "Begin", "clean", "Dealt", "Guide", "Human", "Movie", "Tired", "Legal", "Round", "Shall", "Usage", "Woman", "Vital", "Sorry", "Upset", "Faith"];
     let randomIndex = Math.floor(Math.random() * words.length);
     let randomWord = words[randomIndex];
 
