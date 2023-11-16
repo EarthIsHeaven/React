@@ -6,14 +6,16 @@ function App() {
   const [todos, setTodos] = useState([])
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{id: Date.now(), ...todo }, ...prev])
+    setTodos((prev) => [{id: Date.now(), ...todo }, ...prev]) 
+    // "...prev" = is used to get previous value.
   }
 
   const updateTodo = (id, todo) => {
-    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo: prevTodo)))
+    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id
+      === id ? todo : prevTodo)))
   }
 
-  const deleteTodo =(id) => {
+  const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
 
