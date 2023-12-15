@@ -10,6 +10,7 @@ function Greeting(){
     )
 }
 
+
 const Person = ()=>{
     return (
     <h2>Thinley here!</h2>
