@@ -1,0 +1,22 @@
+body{
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bookList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.book {
+    background-color:white;
+    padding: 2rem;
+    border: 1px solid black;
+    width: 20rem;
+}
+.book img{
+    width: 12rem;
+    height: 14rem;
+    margin-left: 4rem;
+}
