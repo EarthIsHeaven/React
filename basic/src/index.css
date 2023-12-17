@@ -16,7 +16,10 @@ body{
     width: 20rem;
 }
 .book img{
-    width: 12rem;
+    width: 20rem;
     height: 14rem;
-    margin-left: 4rem;
+}
+
+.book h4{
+    margin-top: 3rem;
 }
