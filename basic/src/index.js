@@ -3,26 +3,28 @@ import ReactDOM from 'react-dom/client';
 
 import "./index.css";
 
+const title = 'Breakout Trading Made Easy';
+const author = 'Sunil Gurjar';
+const img = 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71yHTLnNKSL._SY466_.jpg';
+
 const BookList = () => {
     return <section className='bookList'>
-        <Book />
-        <Book />
+        <Book job='developer'/>
+        <Book title='random title' number={22}/>
         <Book />
     </section>
 }
 
-const Book = () => {
-    return <article className='book'>
-        <Image />
-        <Title />
-        <Author />
-    </article>
-}
+const Book = (props) => {
 
-const Image = () => <img src='https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71yHTLnNKSL._SY466_.jpg' alt='Breakout Trading Made Easy'/>
-const Title = () => <h2>Breakout Trading Made Easy</h2>
-const Author = () => {
-    return <h4>Sunil Gurjar</h4>
+    return <article className='book'>
+        <img src={img} alt={title}/>
+        <h2>{title}</h2>
+        <h4>{author}</h4>
+        <p>{props.job}</p>
+        <p>{props.title}</p>
+        <p>{props.number}</p>
+    </article>
 }
 
 //Different ways to create component
