@@ -24,44 +24,51 @@ const books = [
     }
 ]
 
-// const firstBook = {
-//     title : 'Interesting Facts For Curious Minds: 1572',
-//     author : 'Jordan Moore',
-//     img : './images/book.jpg'
-// }
-// const secondBook = {
-//     title : 'Oath and Honor: A Memoir and a Warning',
-//     author : 'Liz Cheney',
-//     img : './images/img2.jpg'
-// }
-// const thirdBook = {
-//     title : 'The Heaven & Earth Grocery Store: A Novel',
-//     author : 'James McBride',
-//     img : './images/img3.jpg'
-// }
-
 const BookList = () => {
+    const someValue = "Value";
+    const displayValue = () => {
+        console.log(someValue);
+    }
     return (
+    <>
+    {/* <EventExample/> */}
     <section className='bookList'>
         {books.map((book) => {
             // const {img, title, author} = book;
-            return < Book {...book} key={book.id} />;
+            return <Book {...book} key={book.id} displayValue= {displayValue}/>;
         })}
-        {/* <Book title = {firstBook.title} author = {firstBook.author} img = {firstBook.img}/>
-        <Book title = {secondBook.title} author = {secondBook.author} img = {secondBook.img}/>
-        <Book title = {thirdBook.title} author = {thirdBook.author} img = {thirdBook.img}/> */}
     </section>
+    </>
     );
 }
 
+// const EventExample = () => {
+
+//     return (
+//         <section>
+//             <form> 
+//                 <h2>Typical Form</h2>
+//                 <input
+//                 type='text'
+//                 name='example'
+//                 onChange={(e) => console.log(e.target.value)}
+//                 style={{ margin: '1rem 0'}}
+//                 />
+//                 <button type='submit'>Submit</button>
+//             </form>
+//             <button onClick={()=> console.log('click me')}>click me</button>
+//         </section>
+//     )
+// }
+
 const Book = (props) => {
-    const {img, title, author} = props;
-    console.log(props);
+    const {img, title, author, displayValue} = props;
 
     return (
     <article className='book'>
         <img src={img} alt={title}/>
         <h2>{title}</h2>
+        <button onClick={displayValue}>display title</button>
         <h4>{author}</h4>
     </article>
     );
