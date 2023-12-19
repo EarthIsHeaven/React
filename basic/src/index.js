@@ -2,33 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import "./index.css";
-
-const books = [
-    {
-        title : 'Interesting Facts For Curious Minds: 1572',
-        author : 'Jordan Moore',
-        img : './images/book.jpg',
-        id : 1
-    },
-    {
-        title : 'Oath and Honor: A Memoir and a Warning',
-        author : 'Liz Cheney',
-        img : './images/img2.jpg',
-        id : 2
-    },
-    {
-        title : 'The Heaven & Earth Grocery Store: A Novel',
-        author : 'James McBride',
-        img : './images/img3.jpg',
-        id: 3
-    }
-]
+import {books} from './books';
+import Book from './Book';
 
 const BookList = () => {
 
     return (
     <>
-    {/* <EventExample/> */}
+    <h1>Amazon Best Sellers</h1>
     <section className='bookList'>
         {books.map((book) => {
             // const {img, title, author} = book;
@@ -58,17 +39,7 @@ const BookList = () => {
 //     )
 // }
 
-const Book = (props) => {
-    const { img, title, author} = props;
 
-    return (
-    <article className='book'>
-        <img src={img} alt={title}/>
-        <h2>{title}</h2>
-        <h4>{author}</h4>
-    </article>
-    );
-}
 
 //Different ways to create component
 

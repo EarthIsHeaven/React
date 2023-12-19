@@ -10,16 +10,34 @@ body{
     height: 100vh;
 }
 .book {
+    margin-top: 1rem;
     background-color:white;
-    padding: 2rem;
     border: 1px solid black;
     width: 20rem;
 }
 .book img{
+    margin-top: 2rem;
     width: 20rem;
     height: 14rem;
 }
 
+.book h2{
+    margin-left: 2rem;
+}
+
 .book h4{
+    margin-left: 2rem;
     margin-top: 3rem;
+}
+.number {
+    font-size: large;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    background-color: orange;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+h1{
+    text-transform: capitalize;
+    text-align: center;
 }
