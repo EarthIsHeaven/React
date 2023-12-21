@@ -1,23 +1,7 @@
 import { useState } from 'react';
 
 const UseStateObject = () => {
-  const data = [
-    {
-      name: "Thinley",
-      age: 19,
-      hobby: "Coding"
-    },
-    {
-      name: "James",
-      age: 33,
-      hobby: "Basketball"
-    },
-    {
-      name: "Steph",
-      age: 30,
-      hobby: "Dancing"
-    }
-  ]
+  
   const [person, setPerson] = useState({
     name: "James",
     age: 22,
