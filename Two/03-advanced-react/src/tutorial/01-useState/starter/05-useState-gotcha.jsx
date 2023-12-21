@@ -11,7 +11,6 @@ const UseStateGotcha = () => {
     // setValue(value + 1);
     // console.log(value);
   }
-  
   return(
     <div>
       <h1>{value}</h1>
