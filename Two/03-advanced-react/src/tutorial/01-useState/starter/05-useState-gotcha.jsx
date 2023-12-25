@@ -11,6 +11,17 @@ const UseStateGotcha = () => {
     // setValue(value + 1);
     // console.log(value);
   }
+
+  //setTimeout concept
+
+  // const handleClick = () => {
+  //   setTimeout(()=>{
+  //     console.log("Clicked");
+  //     setValue((currentState)=>{
+  //       return currentState + 1;
+  //     });
+  //   }, 3000);
+  // }
   return(
     <div>
       <h1>{value}</h1>
